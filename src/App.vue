@@ -1,8 +1,8 @@
 <!-- ---------- template ---------- -->
 <template>
   <div class="flex flex-col items-center justify-center ">
-    <h1 class="text-3xl pt-20 pb-5 font-bold text-red-900">{{title}}</h1>
-    <ModalVue/>
+    <h1 class="text-3xl pt-12 pb-5 font-bold text-red-900">{{title}}</h1>
+    <ModalVue header="Sign up for a Giveaway" text="Grab the Course for Half Price" />
   </div>
 </template>
 
