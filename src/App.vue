@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex flex-col items-center justify-center ">
+    <h1 class="text-3xl pt-20 pb-5 font-bold text-red-900">{{title}}</h1>
+    <input type="text" ref="name" class="pt-3 w-1/2 
+                                      bg-gray-50 border border-gray-300 text-gray-900 
+                                        text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
+                                        block p-2.5 dark:bg-gray-700 dark:border-gray-600 
+                                      dark:placeholder-gray-400 dark:text-white 
+                                      dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <button class="my-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Click
+    </button>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      title: 'this is my title'
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
