@@ -2,7 +2,10 @@
 <template>
   <div class="flex flex-col items-center justify-center ">
     <h1 class="text-3xl pt-12 pb-5 font-bold text-red-900">{{title}}</h1>
-    <ModalVue :header="header" :text="text" theme="sale" />
+    <div v-if="showModal">
+      <ModalVue @close="changeModal" :header="header" :text="text" theme="sale" />
+    </div>
+    <button @click="changeModal" class="bg-red-800 px-3 py-2 rounded-xl text-red-100">Show Modal</button>
   </div>
 </template>
 
@@ -23,12 +26,13 @@ import ModalVue from './components/Modal.vue';
         title : 'My Website Title',
         header: 'Sign up for a Giveaway',
         text: 'Grab the Course for Half Price',
+        showModal: false,
       }
     },
 
     methods: {
-      handleEvent(){
-        console.log(this.$refs.name);
+      changeModal(){
+        this.showModal = !this.showModal
       }
     },
 
